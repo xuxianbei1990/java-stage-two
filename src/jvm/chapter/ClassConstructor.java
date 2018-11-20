@@ -128,7 +128,8 @@ public class ClassConstructor {
 
 	public static void main(String args[]) {
 		System.out.println(new Cat("kitty", 2));
-
+		System.out.println(new Cat("kitty", 2));
+		
 		System.out.println(Price.INSTANCE.currentPrice);
 		System.out.println(new Price(2.8).currentPrice);
 

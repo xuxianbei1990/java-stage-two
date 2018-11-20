@@ -1,19 +1,6 @@
 package collection.chapter;
 
-import java.util.ArrayDeque;
-import java.util.ArrayList;
-import java.util.EnumSet;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
-import java.util.Vector;
-
-import org.apache.commons.collections4.CollectionUtils;
+import java.util.*;
 
 /*
  * 75
@@ -51,7 +38,7 @@ class SimpleEntry<K, V> implements Map.Entry<K, V>, java.io.Serializable {
 		this.value = value;
 	}
 
-	public SimpleEntry(Map.Entry<? extends K, ? extends V> entry) {
+	public SimpleEntry(Map.Entry<? extends K, ? extends V> entry) { 
 		this.key = entry.getKey();
 		this.value = entry.getValue();
 	}
