@@ -73,7 +73,7 @@ public class RadixSort {
 
     public static void main(String[] args) {
         String[] array = {"qd", "abc", "qwe", "hhh", "a", "cws", "ope"};
-        RadixSort radixSort = new RadixSort(array, 3);
+        RadixSort radixSort = new RadixSort(array, 2);
         radixSort.sort();
         radixSort.display();
     }

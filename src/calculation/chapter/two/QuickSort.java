@@ -32,7 +32,7 @@ public class QuickSort extends CommonCalc {
     }
 
     public void sortEx() {
-        doSort(array, startIndex, endIndex);
+        doSortEx(array, startIndex, endIndex);
     }
 
     public void sortEx2() {
@@ -58,6 +58,18 @@ public class QuickSort extends CommonCalc {
     }
 
     //挖坑法
+    /**
+     * 核心思想取一个数，把小的数都放到A的左侧，大的数放到A的右侧。
+     * 1.取第一个数记为A，
+     * 2.记录最右，最左边界，
+     * 3. 先保证放在右边的数，A的左侧都是小于A的数。循环判断右边大于左边， 从右往左取数记为B，如果A大于B，就把B放在A的左侧，记录右下标，左加1，
+     * 4.和上面相反
+     * 5.当下标记放A
+     * @param array
+     * @param startIndex
+     * @param endIndex
+     * @return
+     */
     private int partition(int[] array, int startIndex, int endIndex) {
         int pivot = array[startIndex];
         int left = startIndex;
@@ -68,7 +80,7 @@ public class QuickSort extends CommonCalc {
         while (right >= left) {
             //right指针从右向左进行比较
             while (right >= left) {
-                if (array[right] < pivot) {
+                if (array[right] <  pivot) {
                     array[left] = array[right];
                     index = right;
                     left++;
@@ -91,7 +103,18 @@ public class QuickSort extends CommonCalc {
         return index;
     }
 
-    //指针交换
+    /**
+     * 指针交换
+     * 1.取第一个元素 A，记录左，右下标。
+     * 2.保证右边的数都大于A， 循环从右往左，从右往左取数，如果大于A 右下标减一
+     * 3.与2相反
+     * 4.如果右下标大于左下标，互换左右下标
+     * 5.重合交换
+     * @param arr
+     * @param startIndex
+     * @param endIndex
+     * @return
+     */
     private int partitionEx(int[] arr, int startIndex, int endIndex) {
         // 取第一个位置的元素作为基准元素
         int pivot = arr[startIndex];
@@ -123,7 +146,7 @@ public class QuickSort extends CommonCalc {
     //非递归实现
     private void partitionStack(int[] arr, int startIndex, int endIndex) {
         // 用一个集合栈来代替递归的函数栈
-        Stack<Map<String, Integer>> quickSortStack = new Stack<Map<String, Integer>>();
+        Stack<Map<String, Integer>> quickSortStack = new Stack();
         // 整个数列的起止下标，以哈希的形式入栈
         Map rootParam = new HashMap();
         rootParam.put("startIndex", startIndex);

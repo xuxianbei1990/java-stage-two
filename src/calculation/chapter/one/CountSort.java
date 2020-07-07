@@ -5,6 +5,7 @@ import calculation.chapter.CommonCalc;
 /**
  * 计数排序
  * https://mp.weixin.qq.com/s/WGqndkwLlzyVOHOdGK7X4Q
+ * 核心思想：取无序数的最大数，建立一个数组A，把无序数组在数组A出现过的位置加+1
  * 优点：快
  * 缺点：数据差距不能太大, 只适用整数
  *

@@ -5,6 +5,15 @@ import calculation.chapter.CommonCalc;
 import java.util.Arrays;
 
 /**
+ * 堆排序
+ * 推：一个二叉树，堆中每个节点的值都必须大于等于（或小于等于）其子树中每个节点的值
+ * 1.构建一个堆，取长度-2 / 2 值开始 记为下标A，递减，
+ * 2.记下标A的为parentIndex，  记录父节点temp：取parentIndex的值，取parentIndex的2倍+1的值为，下标B。判断下标B是否小于长度进行循环，
+ * 3.找到右孩子，判断下标B+1是否小于长度，下标B+1 的值》下标B的值，true：右孩子下标++
+ * 4.如果父节点》所有节点；跳出循环
+ * 5.把右孩子放到parentInddex的位置，记录新的父节点，childIndex = 2 * childIndex + 1;
+ * 6.父节点放temp
+ * 7.for 把最后的数和第一个数互调，取0 循环2-6方法。
  * @author: xuxianbei
  * Date: 2019/12/17
  * Time: 14:33

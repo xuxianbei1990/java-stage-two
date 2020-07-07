@@ -67,7 +67,7 @@ public class SkipList<K extends Comparable<K>, V> {
     }
 
     public SkipList(double probability) {
-        this.head = new Node<K, V>(null, null, 0);
+        this.head = new Node(null, null, 0);
         this.probability = probability;
         this.size = 0;
     }
@@ -155,7 +155,7 @@ public class SkipList<K extends Comparable<K>, V> {
             // 如果当前层级已经到达或超越顶层
             // 那么需要构建一个新的顶层
             if (currentLevel >= headLevel) {
-                Node<K, V> newHead = new Node<K, V>(null, null, headLevel + 1);
+                Node<K, V> newHead = new Node(null, null, headLevel + 1);
                 verticalLink(newHead, head);
                 head = newHead;
                 headLevel = head.getLevel();

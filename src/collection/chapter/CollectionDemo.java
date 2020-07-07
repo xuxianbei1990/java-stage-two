@@ -146,9 +146,7 @@ public class CollectionDemo {
 
     // 测试用Set改造的map
     void testMySetMap() {
-
-        Map map = new HashMap<Object, Object>();
-        MySetMap<String, Integer> sm = new MySetMap<String, Integer>();
+        MySetMap<String, Integer> sm = new MySetMap();
         sm.put("语文", 89);
         sm.put("数学", 83);
         sm.put("英文", 80);

@@ -37,6 +37,10 @@ public class BubbleSort {
 
     /**
      * 改进 到后期数据都是有序的，不用进行冒泡排序了
+     *
+     * 1 9 3 6 7 5
+     * 1 3 6 7 5 9
+     * 1 3 6 5 7 9
      */
     public void sortEx() {
         for (int i = 0; i < array.length; i++) {
@@ -59,6 +63,7 @@ public class BubbleSort {
 
     /**
      * 再一次改进
+     * 最后的已经有序了，就不需要再次排序了
      */
     public void sortEx2() {
         int tmp = 0;

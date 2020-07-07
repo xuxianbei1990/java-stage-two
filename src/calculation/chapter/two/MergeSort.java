@@ -3,6 +3,11 @@ package calculation.chapter.two;
 import calculation.chapter.CommonCalc;
 
 /** 归并排序
+ * 1. 如果开始小于结束，从中间进行拆分。
+ * 2. 进行开始，中间，结束，排序
+ * 3. 开辟一个新空间，记录p1, p2 ,p1 从开始到中间，p2从中间到结束，比较p1 和 p2的值，谁小，谁放入。
+ * 4. 剩余的左右放入
+ * 5.放入源数组
  * 母亲庆生；
  * 时间复杂度：O(nlogn)
  * 空间复杂度：O（n)
