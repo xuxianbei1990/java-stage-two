@@ -6,10 +6,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<build>
-		<sourceDirectory>src</sourceDirectory>
+		<sourceDirectory>src\main\java</sourceDirectory>
 		<resources>
 			<resource>
-				<directory>resources</directory>
+				<directory>src/main/resources</directory>
 				<excludes>
 					<exclude>**/*.java</exclude>
 				</excludes>
