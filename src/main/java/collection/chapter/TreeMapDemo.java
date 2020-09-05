@@ -1,4 +1,4 @@
-package collection.chapter;
+package main.java.collection.chapter;
 
 import java.util.Comparator;
 import java.util.Map;
