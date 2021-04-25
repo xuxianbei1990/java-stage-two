@@ -115,9 +115,5 @@ public class AnnotationBase {
 	public void testB(){
 		
 	}
-	
-	public static void main(String[] args){
-		
-	}
 
 }
